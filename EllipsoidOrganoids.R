@@ -1,4 +1,3 @@
-
 options(java.parameters = c("-XX:+UseConcMarkSweepGC", "-Xmx8192m"))
 gc()
 pacman::p_load(pacman, gridExtra, reshape2,tidyverse, cluster, ggpubr, rstatix, factoextra, pROC, dplyr, GGally, glmnet, ggplot2, rjava, ggthemes, ggvis, httr, lubridate, plotly, rio, rmarkdown, shiny, stringr, tidyr, FSelector, rpart, caret, rpart.plot, xlsx, data.tree, caTools, car)
@@ -7,15 +6,15 @@ pacman::p_load(pacman, gridExtra, reshape2,tidyverse, cluster, ggpubr, rstatix, 
 ##  Before running this program, please make sure of the following:                ##
 ##  Remove all N/As, blanks, extraneous data, clean the table, and any weird fonts ##
 ##  Enter relevant data below.                                                     ##
-##  Ensure excel sheet follows the format described in the README. 
+##  Ensure excel sheet follows the format described in the README.                 ##
 ######################## Please set data content here!###############################
 
-file_name                     <- "Filenamehere.xlsx"         # < These settings can  
-target_file_location          <- "~/Desktop/File1/File2"     # < be ignored if
-manual_import                 = FALSE                        # < Turn = FALSE for automatic   
-area_sheetname                <- "area"                      # < area sheet name
-dark_sheetname                <- "dark"                      # < darkness sheet name
-ecc_sheetname                 <- "ecc"                       # < eccentricity sheet name 
+file_name                     <- "Example.xlsx"                               # < These settings can  
+target_file_location          <- "~/Desktop/File1/File2"                      # < be ignored if manual_import = TRUE
+manual_import                 = FALSE                                         # < default = FALSE, for automatic file upload. 
+area_sheetname                <- "area"                                       # < area sheet name
+dark_sheetname                <- "dark"                                       # < darkness sheet name
+ecc_sheetname                 <- "ecc"                                        # < eccentricity sheet name 
 x_variable_normalisation      <- "none"  #types = mm, zs, ,rs, fc, minfc, absfc (minmax, z-score, robust standardisation, fold-change, minimum-value fold-change, **sets minimum  ONLY FOR dark/time/SA)
 # If roc is to be viewed (change_in_dark) view via none (dont use mm/zs/rs) - fc is susceptible to fluctuation from initial value as it is a singular x value, not a slope (slopes are less affected as slope gradient doesn't change). 
 # DO NOT use x_variable_normalisation if possible. 
