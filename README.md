@@ -10,3 +10,5 @@ Organoid Surface Area (SA)
 - Column B) Time Elapsed for Experiment
 - Row A) Name of Sample in 1A
 - Row B) Name of Each Well 
+
+light_abs_k is variable depending on ECM darkness - adjust this to find the optimal constant value per each batch of ECM. 
